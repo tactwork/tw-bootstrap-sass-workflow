@@ -1,0 +1,414 @@
+
+/*
+ * Visual Style Guide styles
+ * Remove if you prefer to use a CSS library, like Bootstrap
+ */
+@import 'bootstrap/bootstrap';
+
+html, body {
+  height: 100%;
+}
+#k-nav {
+  width: 80%;
+  position: fixed;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  .list-group {
+    border-top: solid 70px $brand-primary;
+    //padding weird below to center text in list
+    .list-group-item {
+      padding: 10%;
+      .list-group-item-heading {
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+/* IMPORTANT NOTE - THERE IS A 50px TOP MARGIN IN K-ANIMATIONS.CSS FOR THE NAVBAR FIX ON SLIDE-LEFT CONTAINER */
+#k-page {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; //same as overflow: hidden; but better for mob
+  box-shadow: -.25em 0em .25em .15em rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+#k-page.show{
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
+}
+// the following .carosel stuff makes the carosel directive size appropriately
+.carousel .item {
+  width: 100%; /*slider width*/
+  max-height: 650px; /*slider height*/
+  height: 650px;
+}
+.carousel .item img {
+  width: 100%; /*img width*/
+  height: 650px;
+}
+/*add some makeup*/
+.carousel .carousel-control {
+  background: none;
+  border: none;
+}
+.carousel .carousel-caption {
+  position: absolute;
+  top: 180px;
+  z-index: 10;
+  width: 100%;
+  padding: 0 15% 0 15%;
+  text-align: left;
+  /* WILL USE LATER
+    background-color: rgba(26, 36, 47, 0.8);
+    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  */
+  .h1 {
+    font-size: 72px;
+  }
+  p {font-size: 21px;}
+  .h1,.h2,p {
+    color: #fff;
+    text-shadow: 0 0.032em 0 #b0b0b0, 0px 0.15em 0.11em rgba(0,0,0,0.15), 0px 0.25em 0.021em rgba(0,0,0,0.1), 0px 0.32em 0.32em rgba(0,0,0,0.1);
+  }
+  & .btn {
+    text-shadow: none; // No shadow for button elements in carousel-caption
+  }
+}
+
+.home-row1 {
+  background-color: $brand-info;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+.services {
+  text-align: center;
+  p {
+    height: 200px;
+  }
+}
+.jumbotron {
+  h1 {
+    color: $brand-warning;
+  }
+  min-height: 30%;
+  .well {
+    color: $text-color;
+  }
+  .emboss {
+    color: #fff;
+    text-shadow: 0px 1px 1px $gray-darker, 0 -1px 1px $gray-light;
+  }
+
+}
+.detail-wrapper {
+  display: table;
+  width: 100%;
+  height: 66%;
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+
+.detail-wrapper-inner {
+  display: table-cell;
+  vertical-align: middle;
+  h1,.h1,p {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0.032em 0 #b0b0b0, 0px 0.15em 0.11em rgba(0,0,0,0.15), 0px 0.25em 0.021em rgba(0,0,0,0.1), 0px 0.32em 0.32em rgba(0,0,0,0.1);
+  }
+}
+
+article {
+  h1,h2,h3,.h1,.h2,.h3 {
+    padding: 50px 0 40px 0;
+    text-align: center;
+    margin: auto;
+  }
+  img {
+    @include center-block();
+  }
+  section {
+    @include container-fixed();
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      width: 750px;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 750px;
+    }
+    p {
+      font-family: $font-family-serif;
+      font-size: 16px;
+      line-height: 2.1;
+      text-align:  justify; text-justify: distribute;
+      hyphens: auto;
+      @media (min-width: $screen-sm-min) {
+        font-size: 21px;
+        line-height: 2.1;
+      }
+    }
+
+  }
+}
+
+
+
+p.short-quote {
+ text-align: center;
+ font-size: 16px;
+ margin-bottom: 3em;
+ margin-top: 2em;
+ padding: 1em 1em 1em 1em;
+ border-top: 1px solid #ccc;
+ border-bottom: 1px solid #ccc;
+ font-family: $font-family-sans-serif;
+}
+p.author {
+ text-align: center;
+ font-size: 16px;
+ line-height: 20px;
+ margin-bottom: 1em;
+ font-family: $font-family-sans-serif;
+ font-style: normal;
+}
+p.date-tag {
+ text-align: left;
+ font-size: 16px;
+ line-height: 1px;
+ font-family: $font-family-sans-serif;
+ font-style: normal;
+ padding: 15px 15px 0 15px;
+}
+
+.tag {
+  border-radius: 3px;
+  font-size: small;
+  margin-left: 3px;
+  color: #fff;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 10px 1px 12px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  float: right;
+  text-align: right;
+}
+.info {
+  background-color: #5588ff;
+}
+.life {
+  background-color: #49ab81;
+}
+.to-do {
+  background-color: #f0d264;
+}
+.news {
+  background-color: #fa5a5a;
+}
+
+@media (min-width: $screen-sm-min) {
+  #k-nav {
+    width: 80%;
+  }
+  #k-page.show {
+    -webkit-transform: translateX(80%);
+    transform: translateX(80%);
+  }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  h1,.h1 {
+    font-size: 72px;
+  }
+  h2,.h2 {
+    font-size: 64px;
+  }
+  h3,.h3 {
+    font-size: 36px;
+    //text-indent: .5em;
+  }
+  h4,.h4 {
+    font-size: 28px;
+  }
+  dd,
+  dt {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  #k-nav {
+    width: 40%;
+  }
+  #k-page.show {
+    -webkit-transform: translateX(40%);
+    transform: translateX(40%);
+  }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+  h1,.h1 {
+    font-size: 72px;
+  }
+  h2,.h2 {
+    font-size: 64px;
+  }
+  h3,.h3 {
+    font-size: 36px;
+    //text-indent: .5em;
+  }
+  h4,.h4 {
+    font-size: 28px;
+  }
+  #k-nav {
+    width: 30%;
+  }
+  #k-page.show {
+    -webkit-transform: translateX(30%);
+    transform: translateX(30%);
+  }
+
+}
+/* **** ///// STARTING ANIMATIONS #### ////*/
+
+.slide-left-container {
+  position: relative;
+  top: 50px;
+}
+.slide-left.ng-enter, .slide-left.ng-leave {
+  -webkit-transition: .75s ease-in all;
+  -moz-transition: .75s ease-in all;
+  -o-transition: .75s ease-in all;
+  transition: .75s ease-in all;
+  transition-delay: 0.3s;
+  height:100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  right:0;
+}
+.slide-left.ng-enter {
+  left:100%;
+  opacity: 0;
+}
+.slide-left.ng-enter.ng-enter-active {
+  left:0;
+  opacity: 1;
+}
+
+.slide-left.ng-leave {
+  opacity: 1;
+}
+.slide-left.ng-leave.ng-leave-active {
+  right:100%;
+  opacity: 0;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/RobotoCondensed-Light.eot);
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(/fonts/RobotoCondensed-Light.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/RobotoCondensed-Regular.eot);
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(/fonts/RobotoCondensed-Regular.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/RobotoCondensed-Bold.eot);
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Bold'), url(/fonts/RobotoCondensed-Bold.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: url(/fonts/RobotoCondensed-LightItalic.eot);
+  src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url(/fonts/RobotoCondensed-LightItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-LightItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/fonts/RobotoCondensed-Italic.eot);
+  src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url(/fonts/RobotoCondensed-Italic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Italic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 700;
+  src: url(/fonts/RobotoCondensed-BoldItalic.eot);
+  src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(/fonts/RobotoCondensed-BoldItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-BoldItalic.woff) format('woff');
+}
+@font-face {
+  font-family: 'droidserifregular';
+  font-weight: normal;
+  font-style:  normal;
+  src: url('../fonts/DroidSerif-webfont.eot');
+  src: url('../fonts/DroidSerif-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/DroidSerif-webfont.woff') format('woff'),
+       url('../fonts/DroidSerif-webfont.ttf') format('truetype'),
+       url('../fonts/DroidSerif-webfont.svg#clear_sans_lightregular') format('svg');
+}

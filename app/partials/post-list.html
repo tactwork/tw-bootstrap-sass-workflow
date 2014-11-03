@@ -1,0 +1,38 @@
+<div class="jumbotron">
+	<div class="container">
+		<h1 class="text-center">Tactwork Articles</h1>
+		<br>
+		<div class="row">
+		  <div class="col-md-6 col-md-offset-3">
+		    <div class="input-group input-group-lg">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button">Search</button>
+		      </span>
+		      <input ng-model="query" x-webkit-speech type="search" value="" placeholder="search by any..." type="text" class="form-control">
+		    </div><!-- /input-group -->
+		  </div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+	</div>
+</div>
+<div class="container">
+	<ul class="list-unstyled">
+		<li ng-repeat="post in posts | filter:query | orderBy:orderProp">
+			<div class="panel panel-default">
+			  <div class="panel-body posts-body" back-img="">
+			    <span class="pull-left">{{post.head.date}}</span>
+				<span class="tag {{post.head.tag}} pull-right">{{post.head.tag}}</span>
+				<br>
+				<h3>{{post.head.main}}</h3>
+				<p class="lead">{{post.head.sub}}</p>
+				<a ng-href="#/articles/{{post.head.id}}" class="btn btn-lg btn-default" role="button"><span class="fa fa-fw fa-file-text-o fa-lg"></span> read article</a>
+			  </div>
+			  <div class="panel-footer">
+			  	<span><i class="fa fa-clock-o fa-lg"></i> {{post.head.author}}</span>
+				<div class="pull-right" ng-init="x = 0">
+					<rating value="x" max="4" state-on="'fa fa-lg fa-star'" state-off="'fa fa-lg fa-star-o'"></rating> <small><b>(<i>Rate:</i> {{x}})</b></small>
+				</div>
+			  </div>
+			</div>
+		</li>
+	</ul>
+</div>

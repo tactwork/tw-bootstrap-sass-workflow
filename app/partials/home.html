@@ -1,0 +1,105 @@
+<div ng-controller="CarouselDemoCtrl">
+  
+    <carousel disable-ng-animate interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}">
+        <div class="carousel-caption">
+          <h1>Cool test</h1>
+          <p>Testing</p>
+        </div>
+      </slide>
+    </carousel>
+ 
+</div>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center">System Test & Development</h1>
+      <hr />
+      <div class="col-md-4 services">
+        <div class="well">
+          <h3>
+              <span class="icon-circle"><i class="icon icon-user-input"></i></span>
+          </h3>
+          <h3>About</h3>
+          <p>See the software and system's we use to build our apps. Even watch a video of us developing in real time. We've got a development workflow we stand behind.</p>
+          <button ng-controller="ModalDemoCtrl" ng-click="open()" type="button" class="btn btn-success btn-block">Learn More <span class="fa fa-fw fa-lg fa-chevron-right"></span></button>
+        </div>
+      </div>
+      <div class="col-md-4 services">
+        <div class="well">
+          <h3>
+              <span class="icon-circle"><i class="icon icon-performance"></i></span>
+          </h3>
+          <h3>Performance</h3>
+          <p>Shoot us a message with a brief description of the work you'd like done. We'll get back to you within 30mins. We're dynamic!</p>
+          <a type="button" href="#/contact" class="btn btn-success btn-block">Learn More <span class="fa fa-fw fa-lg fa-chevron-right"></span></a>
+        </div>
+      </div>
+      <div class="col-md-4 services">
+        <div class="well">
+          <h3>
+              <span class="icon-circle"><i class="icon icon-cog"></i></span>
+          </h3>
+          <h3>Support</h3>
+          <p>24/7 Enterprise support. We stand behind our system's and software. It doesn't break, and if you're having issues? ...We'll be here for you.</p>
+          <a type="button" href="#/contact" class="btn btn-success btn-block">Learn More <span class="fa fa-fw fa-lg fa-chevron-right"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<article>
+  <section>
+    <h1>Why tactwork?</h1>
+    <p>Information system's are misunderstood and needlessly bulky. Moreover, many enterprises are ignorantly paying for services they already own. Server's are a convoluted mess of software in enviornments too crucial to clean from head to toe. Because of bulky OS software there's a processing crunch and hardware is scarce. We propose a hybrid of solutions from in-house minimalist optimization to cloud deployment's with 99% uptime. It's time for a spring cleaning...</p>
+    <br>
+  </section>
+</article>
+<br>
+<div class="jumbotron">
+  <div class="container">
+    <br>
+    <div class="h1 text-center"><span class="text-danger">simplicity</span> + <span class="text-warning">fluidity</span> = <span class="text-success">clarity.</span></div>
+    <p>We develop all of our software and configure all of our server's with this rule in mind. In software design, this is above all, the golden rule that developer's need to be thinking of at all times. The end user should be learning to be an expert at your program without ever even thinking about it.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Web Application's: <span class="text-muted">Now with native performance.</span></h2>
+      <p class="lead">We develop with AngularJS, CSS3 with a preprocessor (LESS for simplicity in instruction), and we support almost all backend technologies (yepp...we'll even make it work with your crappy SQL Server 2008). We'll even write the C# web API for a restful service on your microsoft host!(but srsly, linux is way more fun...)</p>
+    </div>
+    <div class="col-md-5">
+      <img class="img-responsive img-rounded" src="images/icons/placeholder--medium.png" alt="Generic placeholder image">
+    </div>
+  </div>
+  <br/>
+  <blockquote>
+    <p class="lead">“Simplicity is the final achievement. After one has played a vast quantity of notes and more notes, it is simplicity that emerges as the crowning reward of art.”</p>
+    <footer>Frederic Chopin</footer>
+  </blockquote>
+  <hr class="featurette-divider" />
+  <div class="row">
+    <div class="col-md-5">
+      <img class="img-responsive" src="images/icons/placeholder--medium.png" popover-placement="right" popover-title="jeffy says:" popover="Rawr!" popover-trigger="mouseover">
+    </div>
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Trusted, Tested, & Enterprise Licensed <span class="text-muted">We love open source.</span></h2>
+      <p class="lead">What's this mean? Server and software independance. It runs on any server and the software loads with just 1 click on any device with a web browser. No more software pushes & patches. We got your back...and of course we'll show you how we did everything :] </p>
+    </div>
+  </div>
+  <blockquote>
+    <p class="lead">“Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius – and a lot of courage – to move in the opposite direction.”</p>
+    <footer>E.F. Schumacker</footer>
+  </blockquote>
+  <hr class="featurette-divider" />
+  <footer>
+    <p class="pull-left">© 2014 tactwork</p>
+    <ul class="nav nav-pills pull-right">
+      <li><a href="#">back to top</a></li>
+      <li><a href="#">licenses</a></li>
+    </ul>
+  </footer>
+</div>
+
